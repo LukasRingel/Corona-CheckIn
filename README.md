@@ -16,7 +16,7 @@
     <a href="https://github.com/LukasRingel/Corona-CheckIn/issues">Request Feature</a>
   </p>
 
-## Built With
+## 💻 Built With
 
 * []() <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="java" width="20" height="20"/> Java
 * []() <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="20" height="20"/> Spring Famework
