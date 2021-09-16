@@ -1,0 +1,26 @@
+
+.heading {
+  padding: 10px 250px 20px;
+}
+
+.form-container {
+  padding: 20px 10px 10px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.button-group {
+  margin-right: 10px
+}
+
+.distance {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}

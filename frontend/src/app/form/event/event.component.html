@@ -1,0 +1,148 @@
+<mat-card>
+
+  <div class="heading">
+    <h1>Neue Veranstalltung</h1>
+  </div>
+
+  <form [formGroup]="eventForm">
+    <mat-stepper>
+      <mat-step>
+        <ng-template matStepLabel>Veranstalltungsdaten</ng-template>
+
+        <div class="form-container">
+
+          <mat-form-field appearance="fill">
+            <mat-label>Name der Veranstalltung</mat-label>
+            <input matInput type="text" formControlName="name">
+          </mat-form-field>
+
+        </div>
+
+        <div class="centered">
+          <button mat-raised-button matStepperNext color="primary">Weiter</button>
+        </div>
+
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Persönliche Daten</ng-template>
+
+        <mat-grid-list cols="2" rowHeight="5:1" class="distance">
+          <div class="form-container" formGroupName="person">
+
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Vorname:</mat-label>
+                <input matInput type="text" formControlName="firstName">
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Nachname:</mat-label>
+                <input matInput type="text" formControlName="lastName">
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Geschlecht:</mat-label>
+                <mat-select formControlName="gender">
+                  <mat-option *ngFor="let gender of genders" [value]="gender">{{gender}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Geburtsdatum:</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="birthDate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Telefonnummer:</mat-label>
+                <input matInput type="text" formControlName="phoneNumber">
+              </mat-form-field>
+            </mat-grid-tile>
+
+          </div>
+        </mat-grid-list>
+
+        <div class="centered">
+          <button mat-raised-button matStepperNext color="primary">Weiter</button>
+        </div>
+
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel matStepperIcon="house">Adressdaten</ng-template>
+
+        <mat-grid-list cols="2" rowHeight="5:1" class="distance">
+          <div class="form-container" formGroupName="address">
+
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Straße + Hausnummer:</mat-label>
+                <input matInput type="text" formControlName="street">
+              </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Postleitzahl:</mat-label>
+                <input matInput type="number" formControlName="postCode">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field appearance="fill">
+                <mat-label>Stadt:</mat-label>
+                <input matInput type="text" formControlName="city">
+              </mat-form-field>
+            </mat-grid-tile>
+
+          </div>
+        </mat-grid-list>
+
+        <div class="centered">
+          <button mat-raised-button matStepperPrevious class="button-group">Zurück</button>
+          <button mat-raised-button matStepperNext color="primary">Weiter</button>
+        </div>
+
+
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Corona Status</ng-template>
+
+        <h4 class="distance">Bitte wähle alle zutreffenden Aussagen aus:</h4>
+
+        <div class="form-container">
+          <span>
+          Ich bin/habe...
+          </span>
+          <br>
+
+          <ul>
+            <li>
+              <mat-checkbox color="primary" (click)="updateCoronaStateToVaccinated()">einen vollen Impfschutz</mat-checkbox>
+            </li>
+            <li>
+              <mat-checkbox color="primary" (click)="updateCoronaStateToRecovered()">einen Genesenen-Ausweis</mat-checkbox>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="centered">
+          <button mat-raised-button matStepperPrevious class="button-group">Zurück</button>
+          <button mat-raised-button color="primary" (click)="submit()">Jetzt erstellen</button>
+        </div>
+
+      </mat-step>
+
+    </mat-stepper>
+
+  </form>
+
+</mat-card>
