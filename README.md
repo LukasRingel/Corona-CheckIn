@@ -18,11 +18,11 @@
 
 ## Built With
 
-* []() Java
-* []() Spring Famework
-* []() MongoDB
-* []() TypeScript
-* []() Angular
+* []() <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="java" width="20" height="20"/> Java
+* []() <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="20" height="20"/> Spring Famework
+* []() <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="mongodb" width="20" height="20"/> MongoDB
+* []() <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" alt="typescript" width="20" height="20"/> TypeScript 
+* []() <img src="https://www.vectorlogo.zone/logos/angular/angular-icon.svg" alt="angular" width="20" height="20"/> Angular
 
 ## Preview
 
