@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/LukasRingel/Corona-CheckIn">
-    <img src="logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Corona CheckIn</h3>
@@ -26,8 +26,8 @@
 
 ## Preview
 
-<img src="images/personal_data.png" height="200px" alt="personal data">
-<img src="images/corona_state.png" height="200px" alt="corona state">
+<img src="images/personal_data.png" height="400px" alt="personal data">
+<img src="images/corona_state.png" height="400px" alt="corona state">
 
 ## Contributing
 
